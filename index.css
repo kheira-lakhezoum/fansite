@@ -1,0 +1,322 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(./2pac.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: -9px 12px 9px black;
+    font-size: 5rem;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin: 20px 25px;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: bold;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/*INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX INDEX */
+
+
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 80px;
+    margin-top: 10%;
+    
+}
+
+h2{
+    font-size: 230%;
+    margin-left: 25px;
+}
+
+.lien{
+    color: black;
+    text-decoration: underline;
+    font-style: italic ;
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 240px;
+    margin-top: 3%;
+}
+
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin-left: 10px;
+    margin-bottom: 3%;
+    position: absolute;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.video{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-top: 50px;
+   margin-left: 160px;
+  
+}
+
+/* BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE BIOGRAPHIE*/
+
+p{
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    margin: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+/* DISCOGRAPHIE  DISCOGRAPHIE  DISCOGRAPHIE  DISCOGRAPHIE  DISCOGRAPHIE  DISCOGRAPHIE  DISCOGRAPHIE  DISCOGRAPHIE DISCOGRAPHIE DISCOGRAPHIE */
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Gloria+Hallelujah&display=swap');
+
+.slider{
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite; 
+}
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+}
+
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
+
+.music{
+    left: 20%;
+    bottom:20%;
+}
+
+.video2 {
+    position: fixed;
+    bottom: 0px;
+    margin-left: 100px;
+    padding-top: 50px;
+}
+
+
+/*PHOTOGRAPHIE PHOTOGRAPHIE PHOTOGRAPHIE PHOTOGRAPHIE PHOTOGRAPHIE PHOTOGRAPHIE PHOTOGRAPHIE PHOTOGRAPHIE PHOTOGRAPHIE PHOTOGRAPHIE */
+
+.photos-portrait{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+    
+.photos-portrait img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 20%;
+}
+
+
+/*CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT */
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&family=Gloria+Hallelujah&display=swap');
+
+.contact{
+    min-height: 500px;
+    width: 45%;
+    margin: 0 auto;
+    background: rgba(245, 245, 245, 0.9);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow:  0px 0px 20px 10px #000;
+    padding: 15px;
+}
+
+.grid {
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+
+.grid-container img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+
+input, 
+textarea{
+    margin: 5px;
+    padding: 10px;
+    border: 1px, solid, darkblue;
+    font-size: 1rem;
+    border-radius: 5px;
+    height: 55%;
+}
+
+textarea{
+    grid-area: ta;
+    height: 40px;
+}
+
+#btn-submit{
+    grid-area: bt;
+    cursor: pointer;
+    background: rgb(59, 215, 217);
+    transition: 0.2s;
+}
+
+#btn-submit:hover{
+    background: rgb(218, 220, 225);
+    color: white;
+}
+
+
+/*RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE RESPONSIVE*/
+
+@media screen and (max-width: 900px) {
+    .grid-container{
+        display: block;
+    }
+
+    .grid-container img{
+        width: 40%;
+    }
+}
+    
+@media screen and (max-width: 610px) {
+    
+    form{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "i1"
+        "i2"
+        "ta"
+        "bt";
+    }
+
+    input, textarea{
+        font-size: 0.8rem;
+    }
+}
+
+
+
